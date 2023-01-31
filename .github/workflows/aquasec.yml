@@ -32,6 +32,7 @@ jobs:
           AQUA_KEY: ${{ secrets.AQUA_KEY }}
           AQUA_SECRET: ${{ secrets.AQUA_SECRET }}
           TRIVY_RUN_AS_PLUGIN: 'aqua'
+          GITHUB_TOKEN: ${{ github.token }}
       - name: Build and push
         uses: docker/build-push-action@v3
         with:
